@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupProject.loginPage">
+    <ContentPage.Content>
+        <Frame BackgroundColor="White">
+            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="Black">
+
+            <Frame BackgroundColor="SkyBlue">
+                <StackLayout>
+                    <Label Text="LOGIN" HorizontalOptions="CenterAndExpand" />
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Username:"/>
+                        <Entry x:Name="username" Placeholder="enter username"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Password:"/>
+                        <Entry x:Name="password" Placeholder="enter password" IsPassword="True"/>
+                    </StackLayout>
+
+                    <Button x:Name="loginButton" Clicked="loginButton_Clicked" 
+                            Text="login" BackgroundColor="Green" TextColor="White"/>
+                        
+                    <Button x:Name="newUserButton" Text="New user?" TextColor="Blue" BackgroundColor="SkyBlue" Clicked="newUserButton_Clicked"/>
+                        
+                    </StackLayout>
+                    
+            </Frame>
+
+            </StackLayout>
+        </Frame>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupProject.ApplyPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Book-A-Hostel" FontAttributes="Bold" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label/>
+            <Label/>
+            <ScrollView>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="150"/>
+                                                        
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ImageButton x:Name="caineHouse" Source="https://rooms.buckingham.ac.uk/Buckingham_Portal/Media/Area/London%20front.JPG" Grid.Row="0" Grid.Column="0" Clicked="caineHouse_Clicked"/>
+                        <Label Text="Caine House" Grid.Row="0" Grid.Column="0" VerticalOptions="End" 
+                               BackgroundColor="Black" TextColor="White" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton x:Name="beloffHouse" Source="https://rooms.buckingham.ac.uk/Buckingham_Portal/Media/Area/IMG_0074.JPG" Grid.Row="0" Grid.Column="1" Clicked="beloffHouse_Clicked"/>
+                        <Label Text="Belloff House" Grid.Row="0" Grid.Column="1" VerticalOptions="End"
+                               BackgroundColor="Black" TextColor="White" HorizontalTextAlignment="Center"/>
+
+                        <ImageButton x:Name="paulleyHouse" Source="https://rooms.buckingham.ac.uk/Buckingham_Portal/Media/Area/IMG_0115.JPG" Grid.Row="1" Grid.Column="0" Clicked="paulleyHouse_Clicked"/>
+                        <Label Text="Paulley House" Grid.Row="1" Grid.Column="0" VerticalOptions="End"
+                               BackgroundColor="Black" TextColor="White" HorizontalTextAlignment="Center"/>
+
+
+                        <ImageButton x:Name="mitreHouse" Source="https://rooms.buckingham.ac.uk/Buckingham_Portal/Media/Area/800%20Mitre%20front.jpg" Grid.Row="1" Grid.Column="1" Clicked="mitreHouse_Clicked"/>
+                        <Label Text="Mitre Court" Grid.Row="1" Grid.Column="1" VerticalOptions="End"
+                               BackgroundColor="Black" TextColor="White" HorizontalTextAlignment="Center"/>
+                        
+
+                    </Grid>
+                    <Label/>
+                    <Label/>
+                    <Label Text="Contact" FontSize="30" FontAttributes="Bold"/>
+                    <Label Text="The Accomodation Office"/>
+                    <Label Text="Rent-a-Hostel"/>
+                    <Label Text="Hostel Street"/>
+                    <Label Text="MM19 1TY"/>
+                    <Label Text="United Kingdom"/>
+                    <Label Text="+44(0)723556490"/>
+                    <Label/>
+                    <Label Text="Allocations policy"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

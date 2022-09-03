@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupProject.statusPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Payment Page" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+            
+
+            <ListView x:Name="payListV" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="rmLbl" Text="{Binding RmName}"/>
+                                <Label x:Name="hsLbl" Text="{Binding HouseName}"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label x:Name="priceLbl" Text="{Binding RmPrice}"/>
+                                    <Label Text="Pounds"/>
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal">
+                                    <Button x:Name="deleteButton" Text="Delete" CommandParameter="{Binding RmName}" Clicked="deleteButton_Clicked"/>
+                                    <Button x:Name="payButton" Text="Pay" CommandParameter="{Binding RmName}" Clicked="payButton_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

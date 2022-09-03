@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupProject.HouseInfoPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="HouseNameLbl" FontSize="40"/>
+                <Label/>
+                <Label x:Name="HouseAddressLbl"/>
+                <Label/>
+                <Frame  BackgroundColor="SkyBlue">
+                    <Image x:Name="HouseInfoImg" Aspect="AspectFill" HeightRequest="190"/>
+                </Frame>
+                <Label/>
+                <Label x:Name="HouseDescriptionLbl"/>
+                <Label/>                 
+                <Button x:Name="ViewRoomButton" BackgroundColor="DarkSeaGreen" Text="View Rooms" HorizontalOptions="CenterAndExpand" Clicked="ViewRoomButton_Clicked"/>
+                <Label/>
+                <Label/>
+                <Label Text="Contact" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="The Accomodation Office"/>
+                <Label Text="Rent-a-Hostel"/>
+                <Label Text="Hostel Street"/>
+                <Label Text="MM19 1TY"/>
+                <Label Text="United Kingdom"/>
+                <Label Text="+44(0)723556490"/>
+                <Label/>
+                <Label Text="Allocations policy"/>
+                
+               
+                <Label Text="rentahostel@gmail.com"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

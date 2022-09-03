@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupProject.roomsPage">
+    <ContentPage.Content>        
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="rmPgLbl" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                <Button x:Name="payPageButton" Text="Pay" HeightRequest="40" HorizontalOptions="End" Clicked="payPageButton_Clicked"/>
+            </StackLayout>            
+
+            <ListView x:Name="roomListView" HasUnevenRows="True" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+
+                                <Label Text="{Binding RmName}" FontSize="20"/>
+
+                                <AbsoluteLayout>
+                                    <Frame  BackgroundColor="SkyBlue" AbsoluteLayout.LayoutBounds="90,0" HeightRequest="190" WidthRequest="200">
+                                        <Image x:Name="roomImage" Source="{Binding RmImage}" Aspect="AspectFill"/>
+                                    </Frame>
+
+                                    <Button x:Name="prevButton" CommandParameter="{Binding RmName, Mode=TwoWay}" Text="Prev Image" 
+                                        FontSize="Small" AbsoluteLayout.LayoutBounds="10,250" Clicked="prevButton_Clicked" />
+                                    <Button x:Name="nextButton" CommandParameter="{Binding RmName, Mode=TwoWay}" Text="Next Image"
+                                        FontSize="Small" AbsoluteLayout.LayoutBounds="300,250" Clicked="nextButton_Clicked"/>
+                                </AbsoluteLayout>
+
+                                <AbsoluteLayout>
+                                    <Label Text="Room Size (Square meters): " AbsoluteLayout.LayoutBounds="0,0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding RmSize} " AbsoluteLayout.LayoutBounds="0,20"/>
+                                </AbsoluteLayout>
+
+                                <AbsoluteLayout>
+                                    <Label Text="Bathroom/Toilet: " AbsoluteLayout.LayoutBounds="0,0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding RmBath} " AbsoluteLayout.LayoutBounds="0,20"/>
+                                </AbsoluteLayout>
+
+                                <AbsoluteLayout>
+                                    <Label Text="Kitchen: " AbsoluteLayout.LayoutBounds="0,0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding RmKitchen} " AbsoluteLayout.LayoutBounds="0,20"/>
+                                </AbsoluteLayout>
+
+                                <AbsoluteLayout>
+                                    <Label Text="Price (British Pound Sterling): " AbsoluteLayout.LayoutBounds="0,0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding RmPrice} " AbsoluteLayout.LayoutBounds="0,20"/>
+                                </AbsoluteLayout>
+
+                                <AbsoluteLayout>
+                                    <Label Text="Rooms left: " AbsoluteLayout.LayoutBounds="0,0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Count} " AbsoluteLayout.LayoutBounds="0,20"/>
+                                </AbsoluteLayout>
+
+                                <Button x:Name="applyButton" Text="Apply" Clicked="applyButton_Clicked" 
+                                        CommandParameter="{Binding RmName, Mode=TwoWay}"/>
+
+                                <Label/>
+                                <Label/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
